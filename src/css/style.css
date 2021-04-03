@@ -1,6 +1,5 @@
 .container-top {
   height: 100vh;
-  background-color: #140d28;
   position: relative; }
   .container-top__coin {
     height: 200px;
@@ -8,17 +7,6 @@
     border-radius: 50%;
     background-color: beige;
     position: absolute; }
-    .container-top__coin, .container-top__coin::after {
-      content: '';
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      position: absolute; }
-    .container-top__coin::after {
-      background-color: rebeccapurple;
-      left: 0;
-      top: 80rem;
-      z-index: -1; }
     .container-top__coin__1 {
       top: 35%;
       left: 50%;
@@ -43,6 +31,19 @@
 
 .App {
   text-align: center; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 @keyframes moveOnTop {
   from {

@@ -1,9 +1,12 @@
 import React from 'react'
+import Back from '../back-animation/Back-animation'
 
 const Top = () => {
 
     return (
         <header className="container-top">
+
+            <Back />
 
             <div className='container-top__coin container-top__coin__2'>
                 <div className="container-top__head">
