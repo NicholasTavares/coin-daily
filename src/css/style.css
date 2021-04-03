@@ -1,10 +1,72 @@
-.top {
-  color: blueviolet; }
-  .top__coin {
-    color: darkgreen; }
+.container-top {
+  height: 100vh;
+  background-color: #140d28;
+  position: relative; }
+  .container-top__coin {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: beige;
+    position: absolute; }
+    .container-top__coin, .container-top__coin::after {
+      content: '';
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      position: absolute; }
+    .container-top__coin::after {
+      background-color: rebeccapurple;
+      left: 0;
+      top: 80rem;
+      z-index: -1; }
+    .container-top__coin__1 {
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .container-top__coin__2 {
+      top: 45%;
+      left: 30%;
+      transform: translate(-50%, -50%); }
+    .container-top__coin__3 {
+      top: 55%;
+      left: 70%;
+      transform: translate(-50%, -50%); }
+  .container-top__head {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%); }
+  .container-top__title {
+    margin-bottom: 1rem; }
+  .container-top__price {
+    font-size: 1.2rem; }
 
 .App {
   text-align: center; }
+
+@keyframes moveOnTop {
+  from {
+    opacity: 0;
+    transform: translateY(300px); }
+  to {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@keyframes moveInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
 
 *,
 *::after,

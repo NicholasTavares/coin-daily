@@ -1,7 +1,66 @@
-.top{
-    color: blueviolet;
+.container-top{
+    height: 100vh;
+    background-color: #140d28;
+    position: relative;
 
     &__coin{
-        color:darkgreen;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: beige;
+        position: absolute;
+
+        &,
+        &::after{
+            content: '';
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        &::after{
+            background-color: rebeccapurple;
+            left: 0;
+            top: 80rem;
+            z-index: -1;
+        }
+
+        &__1{
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        &__2{
+            top: 45%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__3{
+            top: 55%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+
+    
+
+    &__head{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+    }
+
+    &__title{
+        margin-bottom: 1rem;
+    }
+
+    &__price{
+        font-size: 1.2rem;
     }
 }
