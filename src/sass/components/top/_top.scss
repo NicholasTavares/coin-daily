@@ -3,40 +3,57 @@
     position: relative;
 
     &__coin{
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        background-color: beige;
         position: absolute;
-
+        
         &__1{
-            top: 35%;
+            top: 45%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -40%);
             
         }
 
         &__2{
-            top: 45%;
+            top: 55%;
             left: 30%;
             transform: translate(-50%, -50%);
         }
 
         &__3{
-            top: 55%;
+            top: 60%;
             left: 70%;
             transform: translate(-50%, -50%);
         }
     }
 
-
-    
-
     &__head{
+        position: absolute;
+        height: 230px;
+        width: 230px;
+        border-radius: 50%;
+        background-color: beige;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+    }
+
+    &__head-background{
+        position: absolute;
+        height: 234px;
+        width: 234px;
+        border-radius: 50%;
+        background-color: red;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        box-shadow: 0 0rem 1rem .4rem rgba(white, .15);
+    }
+
+    &__data{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -65%);
+
     }
 
     &__title{

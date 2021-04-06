@@ -6,28 +6,47 @@ const Top = () => {
     return (
         <header className="container-top">
 
-            <Back />
 
             <div className='container-top__coin container-top__coin__2'>
+
+                <div className="container-top__head-background">
+                </div>
+
                 <div className="container-top__head">
-                    <h1 className="container-top__title">Ethereum</h1>
-                    <span className="container-top__price">R$ 12,287.03</span>
+                    <div className="container-top__data">
+                        <h1 className="container-top__title">Ethereum</h1>
+                        <span className="container-top__price">R$ 12,287.03</span>
+                    </div>
                 </div>
 
             </div>
 
             <div className='container-top__coin container-top__coin__1'>
-                <div className="container-top__head">
-                    <h1 className="container-top__title">Bitcoin</h1>
-                    <span className="container-top__price">R$ 339,788.75</span>
+
+                <div className="container-top__head-background">
                 </div>
+
+                <div className="container-top__head">
+                    <div className="container-top__data">
+                        <h1 className="container-top__title">Bitcoin</h1>
+                        <span className="container-top__price">R$ 339,788.75</span>
+                    </div>
+                </div>
+
             </div>
 
             <div className='container-top__coin container-top__coin__3'>
-                <div className="container-top__head">
-                    <h1 className="container-top__title">Coin Binance</h1>
-                    <span className="container-top__price">R$ 1,931.91</span>
+
+                <div className="container-top__head-background">
                 </div>
+
+                <div className="container-top__head">
+                    <div className="container-top__data">
+                        <h1 className="container-top__title">Coin Binance</h1>
+                        <span className="container-top__price">R$ 1,931.91</span>
+                    </div>
+                </div>
+
             </div>
 
         </header>
