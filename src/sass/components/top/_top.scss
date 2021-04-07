@@ -33,18 +33,18 @@
         background-color: beige;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -65%);
+        transform: translate(-50%, -50%);
     }
 
     &__head-background{
         position: absolute;
-        height: 234px;
-        width: 234px;
+        height: 235px;
+        width: 235px;
         border-radius: 50%;
         background-color: red;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -65%);
+        transform: translate(-50%, -50%);
         box-shadow: 0 0rem 1rem .4rem rgba(white, .15);
     }
 
@@ -52,7 +52,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -65%);
+        transform: translate(-50%, -75%);
 
     }
 
