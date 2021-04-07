@@ -3,47 +3,142 @@
     position: relative;
 
     &__coin{
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        background-color: beige;
         position: absolute;
-
+        
         &__1{
-            top: 35%;
+            top: 45%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -40%);
             
         }
 
         &__2{
-            top: 45%;
+            top: 55%;
             left: 30%;
             transform: translate(-50%, -50%);
         }
 
         &__3{
-            top: 55%;
+            top: 60%;
             left: 70%;
             transform: translate(-50%, -50%);
         }
     }
 
-
-    
-
     &__head{
+        position: absolute;
+        height: 230px;
+        width: 230px;
+        border-radius: 50%;
+        background-color: beige;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 1s;
+    }
+
+    &__coin:hover &__head{
+        perspective: 800px;
+        transform: translate(-50%, -110%) scale(0.6);
+        box-shadow: 0 0rem 1rem .1rem rgba(black, .15);
+    }
+
+    &__head-background{
+        position: absolute;
+        height: 235px;
+        width: 235px;
+        border-radius: 50%;
+        background-color: #F08909;
+        border: 3px solid lightgrey;
+        border-top-color: blueviolet;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: border-status-animation 6s linear infinite;
+
+   }
+
+   &__price-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+
+    &__price{
+        white-space: nowrap;
+    }
+
+    &__percentage-container{
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    &__percentage-container:not(:last-child){
+        margin-top: 16px;
+        margin-bottom: 6px;
+    }
+
+    &__percentage-time{
+        display: inline-block;
+        width: 42px;
+        background-color: rgb(247, 249, 250);
+        border: 1px solid #ebeef0;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 3px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    &__percentage-price{
+        display: inline-block;
+        margin-left: 10px;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+}
+
+    &__data{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -65%);
+        transform: translate(-50%, -75%);
+
+    }
+
+    &__coin:hover &__top-level{
+        margin-bottom: 0;
+        font-size: 28px;
+    }
+
+    &__top-level{
+        transform: translateY(-60%);
+        transition: all 1s;
+    }
+
+    &__coin:hover &__title{
+        margin-bottom: 0;
+        font-size: 25px;
     }
 
     &__title{
+        font-size: 20px;
         margin-bottom: 1rem;
+        transition: all 1s;
     }
 
-    &__price{
+    &__coin:hover &__price-title{
+        opacity: 0;
+    }
+
+    &__price-title{
         font-size: 1.2rem;
+        transition: all 1s;
     }
 }
