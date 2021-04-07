@@ -1,4 +1,15 @@
 @keyframes border-status-animation {
+    from{
+        transform: translate(-50%, -50%);
+        border-color: lightgrey;
+    }
+
+    to{
+        border-color: #F2150D;
+    }
+}
+
+@keyframes border-status-animation-focus {
     to{
         transform: translate(-50%, -50%) rotate(360deg);
     }

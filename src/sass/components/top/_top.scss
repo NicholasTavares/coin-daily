@@ -1,6 +1,7 @@
 .container-top{
     height: 100vh;
     position: relative;
+    background-color: #262626;
 
     &__coin{
         position: absolute;
@@ -45,17 +46,21 @@
 
     &__head-background{
         position: absolute;
-        height: 235px;
-        width: 235px;
+        height: 240px;
+        width: 240px;
         border-radius: 50%;
         background-color: #F08909;
-        border: 3px solid lightgrey;
+        border: 5px solid lightgrey;
         border-top-color: blueviolet;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: border-status-animation 6s linear infinite;
+        animation: border-status-animation 1.5s ease-in alternate-reverse infinite;
+   }
 
+   &__coin:hover &__head-background{
+        animation: border-status-animation-focus 6s linear infinite;
+        
    }
 
    &__price-container{

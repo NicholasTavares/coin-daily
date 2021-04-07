@@ -1,6 +1,7 @@
 .container-top {
   height: 100vh;
-  position: relative; }
+  position: relative;
+  background-color: #262626; }
   .container-top__coin {
     position: absolute; }
     .container-top__coin__1 {
@@ -31,16 +32,18 @@
     box-shadow: 0 0rem 1rem 0.1rem rgba(0, 0, 0, 0.15); }
   .container-top__head-background {
     position: absolute;
-    height: 235px;
-    width: 235px;
+    height: 240px;
+    width: 240px;
     border-radius: 50%;
     background-color: #F08909;
-    border: 3px solid lightgrey;
+    border: 5px solid lightgrey;
     border-top-color: blueviolet;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: border-status-animation 6s linear infinite; }
+    animation: border-status-animation 1.5s ease-in alternate-reverse infinite; }
+  .container-top__coin:hover .container-top__head-background {
+    animation: border-status-animation-focus 6s linear infinite; }
   .container-top__price-container {
     position: fixed;
     top: 50%;
@@ -139,6 +142,13 @@
     transform: translateX(0); } }
 
 @keyframes border-status-animation {
+  from {
+    transform: translate(-50%, -50%);
+    border-color: lightgrey; }
+  to {
+    border-color: #F2150D; } }
+
+@keyframes border-status-animation-focus {
   to {
     transform: translate(-50%, -50%) rotate(360deg); } }
 
