@@ -34,6 +34,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: all 1s;
+    }
+
+    &__coin:hover &__head{
+        perspective: 800px;
+        transform: translate(-50%, -110%) scale(0.6);
+        box-shadow: 0 0rem 1rem .1rem rgba(black, .15);
     }
 
     &__head-background{
@@ -41,12 +48,24 @@
         height: 235px;
         width: 235px;
         border-radius: 50%;
-        background-color: red;
+        background-color: #F08909;
+        border: 3px solid lightgrey;
+        border-top-color: blueviolet;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        box-shadow: 0 0rem 1rem .4rem rgba(white, .15);
-    }
+        animation: border-status-animation 6s linear infinite;
+
+   }
+
+   &__porcentagem{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    
 
     &__data{
         position: absolute;
@@ -56,11 +75,33 @@
 
     }
 
+    &__coin:hover &__top-level{
+        margin-bottom: 0;
+        font-size: 28px;
+    }
+
+    &__top-level{
+        transform: translateY(-60%);
+        transition: all 1s;
+    }
+
+    &__coin:hover &__title{
+        margin-bottom: 0;
+        font-size: 25px;
+    }
+
     &__title{
+        font-size: 20px;
         margin-bottom: 1rem;
+        transition: all 1s;
+    }
+
+    &__coin:hover &__price{
+        opacity: 0;
     }
 
     &__price{
         font-size: 1.2rem;
+        transition: all 1s;
     }
 }

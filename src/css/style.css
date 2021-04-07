@@ -23,26 +23,52 @@
     background-color: beige;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    transition: all 1s; }
+  .container-top__coin:hover .container-top__head {
+    perspective: 800px;
+    transform: translate(-50%, -110%) scale(0.6);
+    box-shadow: 0 0rem 1rem 0.1rem rgba(0, 0, 0, 0.15); }
   .container-top__head-background {
     position: absolute;
     height: 235px;
     width: 235px;
     border-radius: 50%;
-    background-color: red;
+    background-color: #F08909;
+    border: 3px solid lightgrey;
+    border-top-color: blueviolet;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0rem 1rem 0.4rem rgba(255, 255, 255, 0.15); }
+    animation: border-status-animation 6s linear infinite; }
+  .container-top__porcentagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .container-top__data {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -75%); }
+  .container-top__coin:hover .container-top__top-level {
+    margin-bottom: 0;
+    font-size: 28px; }
+  .container-top__top-level {
+    transform: translateY(-60%);
+    transition: all 1s; }
+  .container-top__coin:hover .container-top__title {
+    margin-bottom: 0;
+    font-size: 25px; }
   .container-top__title {
-    margin-bottom: 1rem; }
+    font-size: 20px;
+    margin-bottom: 1rem;
+    transition: all 1s; }
+  .container-top__coin:hover .container-top__price {
+    opacity: 0; }
   .container-top__price {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    transition: all 1s; }
 
 .App {
   text-align: center; }
@@ -83,6 +109,10 @@
   to {
     opacity: 1;
     transform: translateX(0); } }
+
+@keyframes border-status-animation {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg); } }
 
 *,
 *::after,
