@@ -58,14 +58,51 @@
 
    }
 
-   &__porcentagem{
+   &__price-container{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+    display: flex;
+    flex-direction: column;
 
-    
+    &__price{
+        white-space: nowrap;
+    }
+
+    &__percentage-container{
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    &__percentage-container:not(:last-child){
+        margin-top: 16px;
+        margin-bottom: 6px;
+    }
+
+    &__percentage-time{
+        display: inline-block;
+        width: 42px;
+        background-color: rgb(247, 249, 250);
+        border: 1px solid #ebeef0;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 3px;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    &__percentage-price{
+        display: inline-block;
+        margin-left: 10px;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+}
 
     &__data{
         position: absolute;
@@ -96,11 +133,11 @@
         transition: all 1s;
     }
 
-    &__coin:hover &__price{
+    &__coin:hover &__price-title{
         opacity: 0;
     }
 
-    &__price{
+    &__price-title{
         font-size: 1.2rem;
         transition: all 1s;
     }
