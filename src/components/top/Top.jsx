@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import API from '../../api/api_coin'
 import Back from '../back-animation/Back-animation'
+
 
 const Top = () => {
 
