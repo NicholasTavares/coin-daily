@@ -6,6 +6,7 @@ const Top = () => {
     return (
         <header className="container-top">
 
+            <Back />
 
             <div className='container-top__coin container-top__coin__2'>
 
@@ -37,7 +38,7 @@ const Top = () => {
                 </div>
 
                 <div className="container-top__head">
-                    <div className="container-top__data">
+                    <div className="container-top__preview">
                         <h1 className="container-top__top-level">2</h1>
                         <h2 className="container-top__title">Ethereum</h2>
                         <span className="container-top__price-title">R$ 12,287.03</span>
@@ -76,7 +77,7 @@ const Top = () => {
                 </div>
 
                 <div className="container-top__head">
-                    <div className="container-top__data">
+                    <div className="container-top__preview">
                         <h1 className="container-top__top-level">1</h1>
                         <h2 className="container-top__title">Bitcoin</h2>
                         <span className="container-top__price-title">R$ 339,788.75</span>
@@ -115,7 +116,7 @@ const Top = () => {
                 </div>
 
                 <div className="container-top__head">
-                    <div className="container-top__data">
+                    <div className="container-top__preview">
                         <h1 className="container-top__top-level">3</h1>
                         <h2 className="container-top__title">Coin Binance</h2>
                         <span className="container-top__price-title">R$ 1,931.91</span>
