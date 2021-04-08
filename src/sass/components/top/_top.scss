@@ -1,28 +1,27 @@
 .container-top{
     height: 100vh;
     position: relative;
-    background-color: #262626;
     overflow: hidden;
 
     &__coin{
         position: absolute;
         
         &__1{
-            top: 45%;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -40%);
             animation: moveOnTop 3.5s ease-in-out;
         }
 
         &__2{
-            top: 55%;
+            top: 50%;
             left: 30%;
             transform: translate(-50%, -50%);
             animation: moveInLeft 2s ease-in;
         }
 
         &__3{
-            top: 60%;
+            top: 55%;
             left: 70%;
             transform: translate(-50%, -50%);
             animation: moveInRight 2s ease-in;
@@ -38,12 +37,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: all 1s;
+        transition: transform 1s, box-shadow 1s;
     }
 
     &__coin:hover &__head{
-        perspective: 800px;
         transform: translate(-50%, -110%) scale(0.6);
+        border: 1px solid lightgray;
         box-shadow: 0 0rem 1rem .1rem rgba(black, .15);
     }
 
@@ -52,7 +51,7 @@
         height: 240px;
         width: 240px;
         border-radius: 50%;
-        background-color: #F08909;
+        background-color: black;
         border: 5px solid lightgrey;
         border-top-color: blueviolet;
         top: 50%;
@@ -67,7 +66,7 @@
    }
 
    &__price-container{
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -75,13 +74,17 @@
     flex-direction: column;
 
     &__price{
+        display: inline-block;
+        background-color: #f7f9fa;
+        border: 1px solid #ebeef0;
         white-space: nowrap;
+        padding: 3px;
+        border-radius: 5px;
     }
 
     &__percentage-container{
         display: flex;
         text-align: center;
-        align-items: center;
     }
 
     &__percentage-container:not(:last-child){
@@ -108,45 +111,46 @@
         font-size: 14px;
         font-weight: 500;
         text-align: center;
+        color: #f44336;
     }
 
 }
-
-    &__data{
+    &__preview{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -75%);
-
-    }
-
-    &__coin:hover &__top-level{
-        margin-bottom: 0;
-        font-size: 28px;
     }
 
     &__top-level{
+        font-style: italic;
+        text-decoration: underline;
+        color: goldenrod;
         transform: translateY(-60%);
         transition: all 1s;
     }
-
-    &__coin:hover &__title{
-        margin-bottom: 0;
-        font-size: 25px;
+    &__coin:hover &__top-level{
+        margin-bottom: auto;
+        font-size: 28px;
     }
-
+   
     &__title{
         font-size: 20px;
         margin-bottom: 1rem;
         transition: all 1s;
     }
-
-    &__coin:hover &__price-title{
-        opacity: 0;
+    &__coin:hover &__title{
+        margin-bottom: 0;
+        font-size: 25px;
     }
 
+
     &__price-title{
-        font-size: 1.2rem;
+        white-space: nowrap;
+        font-size: 18px;
         transition: all 1s;
+    }
+    &__coin:hover &__price-title{
+        opacity: 0;
     }
 }

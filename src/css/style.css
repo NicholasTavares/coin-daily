@@ -1,22 +1,21 @@
 .container-top {
   height: 100vh;
   position: relative;
-  background-color: #262626;
   overflow: hidden; }
   .container-top__coin {
     position: absolute; }
     .container-top__coin__1 {
-      top: 45%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -40%);
       animation: moveOnTop 3.5s ease-in-out; }
     .container-top__coin__2 {
-      top: 55%;
+      top: 50%;
       left: 30%;
       transform: translate(-50%, -50%);
       animation: moveInLeft 2s ease-in; }
     .container-top__coin__3 {
-      top: 60%;
+      top: 55%;
       left: 70%;
       transform: translate(-50%, -50%);
       animation: moveInRight 2s ease-in; }
@@ -29,17 +28,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all 1s; }
+    transition: transform 1s, box-shadow 1s; }
   .container-top__coin:hover .container-top__head {
-    perspective: 800px;
     transform: translate(-50%, -110%) scale(0.6);
+    border: 1px solid lightgray;
     box-shadow: 0 0rem 1rem 0.1rem rgba(0, 0, 0, 0.15); }
   .container-top__head-background {
     position: absolute;
     height: 240px;
     width: 240px;
     border-radius: 50%;
-    background-color: #F08909;
+    background-color: black;
     border: 5px solid lightgrey;
     border-top-color: blueviolet;
     top: 50%;
@@ -49,18 +48,22 @@
   .container-top__coin:hover .container-top__head-background {
     animation: border-status-animation-focus 6s linear infinite; }
   .container-top__price-container {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column; }
     .container-top__price-container__price {
-      white-space: nowrap; }
+      display: inline-block;
+      background-color: #f7f9fa;
+      border: 1px solid #ebeef0;
+      white-space: nowrap;
+      padding: 3px;
+      border-radius: 5px; }
     .container-top__price-container__percentage-container {
       display: flex;
-      text-align: center;
-      align-items: center; }
+      text-align: center; }
     .container-top__price-container__percentage-container:not(:last-child) {
       margin-top: 16px;
       margin-bottom: 6px; }
@@ -80,30 +83,35 @@
       white-space: nowrap;
       font-size: 14px;
       font-weight: 500;
-      text-align: center; }
-  .container-top__data {
+      text-align: center;
+      color: #f44336; }
+  .container-top__preview {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -75%); }
-  .container-top__coin:hover .container-top__top-level {
-    margin-bottom: 0;
-    font-size: 28px; }
   .container-top__top-level {
+    font-style: italic;
+    text-decoration: underline;
+    color: goldenrod;
     transform: translateY(-60%);
     transition: all 1s; }
-  .container-top__coin:hover .container-top__title {
-    margin-bottom: 0;
-    font-size: 25px; }
+  .container-top__coin:hover .container-top__top-level {
+    margin-bottom: auto;
+    font-size: 28px; }
   .container-top__title {
     font-size: 20px;
     margin-bottom: 1rem;
     transition: all 1s; }
+  .container-top__coin:hover .container-top__title {
+    margin-bottom: 0;
+    font-size: 25px; }
+  .container-top__price-title {
+    white-space: nowrap;
+    font-size: 18px;
+    transition: all 1s; }
   .container-top__coin:hover .container-top__price-title {
     opacity: 0; }
-  .container-top__price-title {
-    font-size: 1.2rem;
-    transition: all 1s; }
 
 .App {
   text-align: center; }
