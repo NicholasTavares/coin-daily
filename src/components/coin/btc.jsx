@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const BTC = () => {
-
-    async function coin() {
-        await axios.get('https://www.mercadobitcoin.net/api/BTC/ticker/').then(res => console.log(res))
-    }
-
-    useEffect(() => coin())
+const BTC = ({ priceBTC }) => {
 
     return (
         <div className='container-top__coin container-top__coin__1'>
@@ -16,7 +10,7 @@ const BTC = () => {
             </div>
 
             <div className="container-top__price-container">
-                <h1 className='container-top__price-container__price'>R$ 339,788.75</h1>
+                <h1 className='container-top__price-container__price'>R$ {priceBTC ? parseFloat(priceBTC.buy).toFixed(3) : 'Loading'}</h1>
 
                 <div className='container-top__price-container__percentage-container'>
                     <span className='container-top__price-container__percentage-time'>
@@ -43,7 +37,7 @@ const BTC = () => {
                 <div className="container-top__preview">
                     <h1 className="container-top__top-level">1</h1>
                     <h2 className="container-top__title">Bitcoin</h2>
-                    <span className="container-top__price-title">R$ 339,788.75</span>
+                    <span className="container-top__price-title">R$ {priceBTC ? parseFloat(priceBTC.buy).toFixed(3) : 'Loading'}</span>
                 </div>
             </div>
 
