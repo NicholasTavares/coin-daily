@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const LTC = () => {
 
@@ -9,7 +10,7 @@ const LTC = () => {
             </div>
 
             <div className="container-top__price-container">
-                <h1 className='container-top__price-container__price'>R$ 1,931.91</h1>
+                <h1 className='container-top__price-container__price'>R$ {priceLTC ? parseFloat(priceLTC.buy).toFixed(3) : 'Loading'}</h1>
 
                 <div className='container-top__price-container__percentage-container'>
                     <span className='container-top__price-container__percentage-time'>
@@ -36,7 +37,7 @@ const LTC = () => {
                 <div className="container-top__preview">
                     <h1 className="container-top__top-level">3</h1>
                     <h2 className="container-top__title">Litecoin</h2>
-                    <span className="container-top__price-title">R$ 1,251.26</span>
+                    <span className="container-top__price-title">R$ {priceLTC ? parseFloat(priceLTC.buy).toFixed(3) : 'Loading'}</span>
                 </div>
             </div>
 

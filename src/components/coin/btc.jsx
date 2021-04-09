@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const BTC = ({ priceBTC }) => {
+const BTC = () => {
+
 
     return (
         <div className='container-top__coin container-top__coin__1'>
