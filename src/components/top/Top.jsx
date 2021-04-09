@@ -1,9 +1,15 @@
+import axios from 'axios'
 import React, { useEffect } from 'react'
-import API from '../../api/api_coin'
 import Back from '../back-animation/Back-animation'
 
 
 const Top = () => {
+
+    async function coin() {
+        await axios.get('https://www.mercadobitcoin.net/api/ETH/ticker/').then(res => console.log(res))
+    }
+
+    useEffect(() => coin())
 
     return (
         <header className="container-top">
@@ -35,6 +41,11 @@ const Top = () => {
                         <span className="container-top__price-container__percentage-price">
                             &uarr; 14.45%
                         </span>
+                    </div>
+
+
+                    <div className="container-top__price-container__history">
+                        Dados
                     </div>
 
                 </div>
@@ -120,8 +131,8 @@ const Top = () => {
                 <div className="container-top__head">
                     <div className="container-top__preview">
                         <h1 className="container-top__top-level">3</h1>
-                        <h2 className="container-top__title">Coin Binance</h2>
-                        <span className="container-top__price-title">R$ 1,931.91</span>
+                        <h2 className="container-top__title">Litecoin</h2>
+                        <span className="container-top__price-title">R$ 1,251.26</span>
                     </div>
                 </div>
 
