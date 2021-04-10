@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import Back from '../back-animation/Back-animation'
 import BTC from '../coin/btc'
 import ETH from '../coin/eth'
@@ -7,8 +6,6 @@ import LTC from '../coin/ltc'
 
 
 const Top = () => {
-
-
     return (
         <header className="container-top">
 

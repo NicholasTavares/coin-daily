@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useEffect } from 'react'
+import useAPI from '../../api/useAPI.js'
 
 const BTC = () => {
+
+    const [price, searchPrice] = useAPI()
+    useEffect(() => searchPrice('BTC'), [])
 
 
     return (
@@ -11,7 +14,7 @@ const BTC = () => {
             </div>
 
             <div className="container-top__price-container">
-                <h1 className='container-top__price-container__price'>R$ {priceBTC ? parseFloat(priceBTC.buy).toFixed(3) : 'Loading'}</h1>
+                <h1 className='container-top__price-container__price'>{price ? `R$ ${parseFloat(price.buy).toFixed(3)}` : 'Loading'}</h1>
 
                 <div className='container-top__price-container__percentage-container'>
                     <span className='container-top__price-container__percentage-time'>
@@ -38,7 +41,7 @@ const BTC = () => {
                 <div className="container-top__preview">
                     <h1 className="container-top__top-level">1</h1>
                     <h2 className="container-top__title">Bitcoin</h2>
-                    <span className="container-top__price-title">R$ {priceBTC ? parseFloat(priceBTC.buy).toFixed(3) : 'Loading'}</span>
+                    <span className="container-top__price-title">R$ {price ? `R$ ${parseFloat(price.buy).toFixed(3)}` : 'Loading'}</span>
                 </div>
             </div>
 

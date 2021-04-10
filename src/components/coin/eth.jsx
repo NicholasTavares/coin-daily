@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import useAPI from '../../api/useAPI.js'
 
 const ETH = () => {
 
+    const [price, searchPrice] = useAPI()
+    useEffect(() => searchPrice('ETH'), [])
 
     return (
         <div className='container-top__coin container-top__coin__2'>
@@ -11,7 +13,7 @@ const ETH = () => {
             </div>
 
             <div className="container-top__price-container">
-                <h1 className='container-top__price-container__price'>R$ {priceETH ? parseFloat(priceETH.buy).toFixed(3) : 'Loading'}</h1>
+                <h1 className='container-top__price-container__price'>R$ {price ? parseFloat(price.buy).toFixed(3) : 'Loading'}</h1>
 
                 <div className='container-top__price-container__percentage-container'>
                     <span className='container-top__price-container__percentage-time'>
@@ -43,7 +45,7 @@ const ETH = () => {
                 <div className="container-top__preview">
                     <h1 className="container-top__top-level">2</h1>
                     <h2 className="container-top__title">Ethereum</h2>
-                    <span className="container-top__price-title">R$ {priceETH ? parseFloat(priceETH.buy).toFixed(3) : 'Loading'}</span>
+                    <span className="container-top__price-title">R$ {price ? parseFloat(price.buy).toFixed(3) : 'Loading'}</span>
                 </div>
             </div>
 
