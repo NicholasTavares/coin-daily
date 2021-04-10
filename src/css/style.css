@@ -5,17 +5,17 @@
   .container-top__coin {
     position: absolute; }
     .container-top__coin__1 {
-      top: 40%;
+      top: 35%;
       left: 50%;
       transform: translate(-50%, -40%);
       animation: moveOnTop 3.5s ease-in-out; }
     .container-top__coin__2 {
-      top: 50%;
+      top: 45%;
       left: 30%;
       transform: translate(-50%, -50%);
       animation: moveInLeft 2s ease-in; }
     .container-top__coin__3 {
-      top: 55%;
+      top: 45%;
       left: 70%;
       transform: translate(-50%, -50%);
       animation: moveInRight 2s ease-in; }
@@ -99,8 +99,6 @@
         transition: transform 1s ease; }
       .container-top__price-container__container-book__arrow > svg {
         animation: arrow 1s ease-in-out alternate-reverse infinite; }
-      .container-top__price-container__container-book__arrow:hover {
-        transform: rotate(540deg); }
       .container-top__price-container__container-book__book {
         position: absolute;
         width: 220px;
@@ -109,9 +107,6 @@
         margin-right: auto;
         background-color: #f7f9fa;
         transition: all ease-in-out 1s; }
-      .container-top__price-container__container-book__arrow:hover ~ .container-top__price-container__container-book__book {
-        height: 180px;
-        border: 1px solid #ebeef0; }
   .container-top__preview {
     position: absolute;
     top: 50%;
@@ -196,6 +191,13 @@
     transform: translateY(0); }
   to {
     transform: translateY(10px); } }
+
+.arrowRotate {
+  transform: rotate(540deg); }
+
+.slide {
+  height: 180px;
+  border: 1px solid #ebeef0; }
 
 *,
 *::after,

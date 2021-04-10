@@ -7,21 +7,21 @@
         position: absolute;
         
         &__1{
-            top: 40%;
+            top: 35%;
             left: 50%;
             transform: translate(-50%, -40%);
             animation: moveOnTop 3.5s ease-in-out;
         }
 
         &__2{
-            top: 50%;
+            top: 45%;
             left: 30%;
             transform: translate(-50%, -50%);
             animation: moveInLeft 2s ease-in;
         }
 
         &__3{
-            top: 55%;
+            top: 45%;
             left: 70%;
             transform: translate(-50%, -50%);
             animation: moveInRight 2s ease-in;
@@ -132,10 +132,6 @@
             animation: arrow 1s ease-in-out alternate-reverse infinite;
         }
 
-        &__arrow:hover{
-            transform: rotate(540deg);
-        }
-
         &__book{
             position: absolute;
             width: 220px;
@@ -144,11 +140,6 @@
             margin-right: auto;
             background-color: #f7f9fa;
             transition: all ease-in-out 1s;
-        }
-
-        &__arrow:hover ~ &__book{
-            height: 180px;
-            border: 1px solid #ebeef0;
         }
 
     }
