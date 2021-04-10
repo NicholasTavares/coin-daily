@@ -30,7 +30,7 @@
     transform: translate(-50%, -50%);
     transition: transform 1s, box-shadow 1s; }
   .container-top__coin:hover .container-top__head {
-    transform: translate(-50%, -110%) scale(0.6);
+    transform: translate(-50%, -110%) scale(0.5);
     border: 1px solid lightgray;
     box-shadow: 0 0rem 1rem 0.1rem rgba(0, 0, 0, 0.15); }
   .container-top__background-status {
@@ -86,15 +86,32 @@
       font-weight: 500;
       text-align: center;
       color: #f44336; }
-    .container-top__price-container__book {
-      background-color: #f44336;
-      transform: translateY(100px); }
-      .container-top__price-container__book__arrow {
+    .container-top__price-container__container-book {
+      width: 220px;
+      transform: translate(-50%, 350%);
+      position: absolute; }
+      .container-top__price-container__container-book__arrow {
         display: inline-block;
         cursor: pointer;
-        font-size: 28px;
+        font-size: 30px;
+        font-weight: 700;
         color: blueviolet;
+        transition: transform 1s ease; }
+      .container-top__price-container__container-book__arrow > svg {
         animation: arrow 1s ease-in-out alternate-reverse infinite; }
+      .container-top__price-container__container-book__arrow:hover {
+        transform: rotate(540deg); }
+      .container-top__price-container__container-book__book {
+        position: absolute;
+        width: 220px;
+        border-radius: 3px;
+        height: 0px;
+        margin-right: auto;
+        background-color: #f7f9fa;
+        transition: all ease-in-out 1s; }
+      .container-top__price-container__container-book__arrow:hover ~ .container-top__price-container__container-book__book {
+        height: 180px;
+        border: 1px solid #ebeef0; }
   .container-top__preview {
     position: absolute;
     top: 50%;

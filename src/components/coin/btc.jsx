@@ -3,6 +3,7 @@ import useAPI from '../../api/useAPI.js'
 import Price from './price/price.jsx'
 import Preview from './preview/preview.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
+import { FiChevronDown } from 'react-icons/fi';
 
 const BTC = () => {
     const [price, searchPrice] = useAPI()
@@ -26,6 +27,16 @@ const BTC = () => {
             <Price price={price} />
 
             <Preview coin_name='Bitcoin (BTC)' price={price} logo='Procurar logo' />
+
+            <div className="container-top__price-container__container-book">
+                <span className="container-top__price-container__container-book__arrow">
+                    <FiChevronDown />
+                </span>
+
+                <div className="container-top__price-container__container-book__book">
+
+                </div>
+            </div>
 
         </div>
     )
