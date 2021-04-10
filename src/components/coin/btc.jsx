@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import useAPI from '../../api/useAPI.js'
 import Price from './price/price.jsx'
+import Preview from './preview/preview.jsx'
+import BackgroundStatus from './background-status/background-status.jsx'
 
 const BTC = () => {
     const [price, searchPrice] = useAPI()
@@ -19,18 +21,11 @@ const BTC = () => {
     return (
         <div className='container-top__coin container-top__coin__1'>
 
-            <div className="container-top__head-background">
-            </div>
+            <BackgroundStatus calcStatus="Passar dois valores para calcular porcentagem de valorização ou desvalorização" />
 
             <Price price={price} />
 
-            <div className="container-top__head">
-                <div className="container-top__preview">
-                    <h1 className="container-top__top-level">1</h1>
-                    <h2 className="container-top__title">Bitcoin</h2>
-                    <span className="container-top__price-title">{price ? `R$ ${parseFloat(price.buy).toFixed(3)}` : 'Loading'}</span>
-                </div>
-            </div>
+            <Preview coin_name='Bitcoin (BTC)' price={price} logo='Procurar logo' />
 
         </div>
     )

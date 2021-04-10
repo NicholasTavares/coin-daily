@@ -33,7 +33,7 @@
     transform: translate(-50%, -110%) scale(0.6);
     border: 1px solid lightgray;
     box-shadow: 0 0rem 1rem 0.1rem rgba(0, 0, 0, 0.15); }
-  .container-top__head-background {
+  .container-top__background-status {
     position: absolute;
     height: 240px;
     width: 240px;
@@ -45,7 +45,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     animation: border-status-animation 1.5s ease-in alternate-reverse infinite; }
-  .container-top__coin:hover .container-top__head-background {
+  .container-top__coin:hover .container-top__background-status {
     animation: border-status-animation-focus 6s linear infinite; }
   .container-top__price-container {
     position: absolute;

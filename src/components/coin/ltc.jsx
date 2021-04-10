@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import useAPI from '../../api/useAPI.js'
 import Price from './price/price.jsx'
+import Preview from './preview/preview.jsx'
+import BackgroundStatus from './background-status/background-status.jsx'
 
 const LTC = () => {
 
@@ -19,18 +21,11 @@ const LTC = () => {
     return (
         <div className='container-top__coin container-top__coin__3'>
 
-            <div className="container-top__head-background">
-            </div>
+            <BackgroundStatus />
 
             <Price price={price} />
 
-            <div className="container-top__head">
-                <div className="container-top__preview">
-                    <h1 className="container-top__top-level">3</h1>
-                    <h2 className="container-top__title">Litecoin</h2>
-                    <span className="container-top__price-title">R$ {price ? parseFloat(price.buy).toFixed(3) : 'Loading'}</span>
-                </div>
-            </div>
+            <Preview coin_name='Litecoin (LTC)' price={price} logo='Procurar logo' />
 
         </div>
     )
