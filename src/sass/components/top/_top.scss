@@ -72,6 +72,7 @@
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     &__price{
         display: inline-block;
@@ -87,11 +88,11 @@
         text-align: center;
     }
 
-    &__percentage-container:not(:last-child){
-        margin-top: 16px;
+    &__percentage-container:first-of-type{
+        margin-top: 14px;
         margin-bottom: 6px;
     }
-
+    
     &__percentage-time{
         display: inline-block;
         width: 42px;
@@ -112,6 +113,19 @@
         font-weight: 500;
         text-align: center;
         color: #f44336;
+    }
+
+    &__book{
+        background-color: #f44336;
+        transform: translateY(100px);
+
+        &__arrow{
+            display: inline-block;
+            cursor: pointer;
+            font-size: 28px;
+            color: blueviolet;
+            animation: arrow 1s ease-in-out alternate-reverse infinite;
+        }
     }
 
 }

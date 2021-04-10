@@ -1,4 +1,7 @@
 import React from 'react'
+import { FiChevronDown } from 'react-icons/fi';
+
+
 
 const Price = ({ price }) => {
 
@@ -23,6 +26,12 @@ const Price = ({ price }) => {
                 <span className="container-top__price-container__percentage-price">
                     &uarr; 8.09%
                         </span>
+            </div>
+
+            <div className="container-top__price-container__book">
+                <span className="container-top__price-container__book__arrow">
+                    <FiChevronDown />
+                </span>
             </div>
 
         </div>
