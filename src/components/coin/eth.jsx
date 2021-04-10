@@ -4,7 +4,16 @@ import useAPI from '../../api/useAPI.js'
 const ETH = () => {
 
     const [price, searchPrice] = useAPI()
-    useEffect(() => searchPrice('ETH'), [])
+    const [time, setTime] = useState(0)
+    useEffect(() => {
+        searchPrice('ETH')
+        const interval = setInterval(() => {
+            setTime(time + 1);
+        }, 5000);
+
+        return () => clearInterval(interval)
+
+    }, [time])
 
     return (
         <div className='container-top__coin container-top__coin__2'>

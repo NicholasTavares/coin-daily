@@ -1,10 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import useAPI from '../../api/useAPI.js'
 
 const BTC = () => {
 
     const [price, searchPrice] = useAPI()
-    useEffect(() => searchPrice('BTC'), [])
+    const [time, setTime] = useState(0)
+    useEffect(() => {
+        searchPrice('BTC')
+        const interval = setInterval(() => {
+            setTime(time + 1);
+        }, 5000);
+
+        return () => clearInterval(interval)
+
+    }, [time])
 
 
     return (
