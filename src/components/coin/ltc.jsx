@@ -3,6 +3,7 @@ import useAPI from '../../api/useAPI.js'
 import Price from './price/price.jsx'
 import Preview from './preview/preview.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
+import Book from './book/book.jsx'
 
 const LTC = () => {
 
@@ -26,6 +27,8 @@ const LTC = () => {
             <Price price={price} />
 
             <Preview coin_name='Litecoin (LTC)' price={price} logo='Procurar logo' />
+
+            <Book />
 
         </div>
     )

@@ -3,6 +3,7 @@ import useAPI from '../../api/useAPI.js'
 import Preview from './preview/preview.jsx'
 import Price from './price/price.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
+import Book from './book/book.jsx'
 
 const ETH = () => {
 
@@ -26,6 +27,8 @@ const ETH = () => {
             <Price price={price} />
 
             <Preview coin_name='Ethereum (ETH)' price={price} logo='Procurar logo' />
+
+            <Book />
 
         </div>
     )
