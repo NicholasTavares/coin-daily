@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import useAPI from '../../api/useAPI.js'
+import Price from './price/price.jsx'
 
 const LTC = () => {
 
@@ -21,29 +22,7 @@ const LTC = () => {
             <div className="container-top__head-background">
             </div>
 
-            <div className="container-top__price-container">
-                <h1 className='container-top__price-container__price'>R$ {price ? parseFloat(price.buy).toFixed(3) : 'Loading'}</h1>
-
-                <div className='container-top__price-container__percentage-container'>
-                    <span className='container-top__price-container__percentage-time'>
-                        24h %
-                        </span>
-                    <span className="container-top__price-container__percentage-price">
-                        &darr; 1.83%
-                        </span>
-
-                </div>
-
-                <div className='container-top__price-container__percentage-container'>
-                    <span className='container-top__price-container__percentage-time'>
-                        7d %
-                        </span>
-                    <span className="container-top__price-container__percentage-price">
-                        &uarr; 42.59%
-                        </span>
-                </div>
-
-            </div>
+            <Price price={price} />
 
             <div className="container-top__head">
                 <div className="container-top__preview">
