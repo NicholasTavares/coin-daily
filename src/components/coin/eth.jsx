@@ -25,7 +25,7 @@ const ETH = () => {
 
             <BackgroundStatus calcStatus={price} />
 
-            <Price price={price} coin_name='Bitcoin (BTC)' />
+            <Price price={price} coin_name='Ethereum (ETH)' />
 
             <Preview coin_name='Ethereum (ETH)' price={price} logo={<FaEthereum />} />
 

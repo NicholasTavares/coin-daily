@@ -19,9 +19,6 @@ const BTC = () => {
 
     }, [time])
 
-    console.log(price)
-
-
     return (
         <div className='container-top__coin container-top__coin__1'>
 

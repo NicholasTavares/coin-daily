@@ -25,7 +25,7 @@ const LTC = () => {
 
             <BackgroundStatus calcStatus={price} />
 
-            <Price price={price} coin_name='Bitcoin (BTC)' />
+            <Price price={price} coin_name='Litecoin (LTC)' />
 
             <Preview coin_name='Litecoin (LTC)' price={price} logo={<SiLitecoin />} />
 
