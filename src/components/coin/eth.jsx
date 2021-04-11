@@ -22,7 +22,7 @@ const ETH = () => {
     return (
         <div className='container-top__coin container-top__coin__2'>
 
-            <BackgroundStatus />
+            <BackgroundStatus calcStatus={price} />
 
             <Price price={price} />
 

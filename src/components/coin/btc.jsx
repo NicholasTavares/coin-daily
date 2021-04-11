@@ -22,7 +22,7 @@ const BTC = () => {
     return (
         <div className='container-top__coin container-top__coin__1'>
 
-            <BackgroundStatus calcStatus="Passar dois valores para calcular porcentagem de valorização ou desvalorização" />
+            <BackgroundStatus calcStatus={price} />
 
             <Price price={price} />
 

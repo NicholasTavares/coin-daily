@@ -22,7 +22,7 @@ const LTC = () => {
     return (
         <div className='container-top__coin container-top__coin__3'>
 
-            <BackgroundStatus />
+            <BackgroundStatus calcStatus={price} />
 
             <Price price={price} />
 

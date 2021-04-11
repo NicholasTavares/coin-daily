@@ -52,13 +52,21 @@
         width: 260px;
         border-radius: 50%;
         background-color: black;
-        border: 5px solid lightgrey;
+        border: 6px solid lightgrey;
         border-top-color: blueviolet;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: border-status-animation 1.5s ease-in alternate-reverse infinite;
    }
+
+   .background-status-down{
+       animation: border-status-animation-down 1.5s ease-in alternate-reverse infinite;
+    }
+    .background-status-up{
+        animation: border-status-animation-up 1.5s ease-in alternate-reverse infinite;
+    }
+
+
 
    &__coin:hover &__background-status{
         animation: border-status-animation-focus 6s linear infinite;
