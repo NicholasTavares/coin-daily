@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Price = ({ price }) => {
+const Price = ({ price, coin_name }) => {
 
     return (
         <div className="container-top__price-container">
-            <h1 className='container-top__price-container__price'>{price ? `R$ ${parseFloat(price.buy).toFixed(3)}` : 'Loading'}</h1>
+            <h1 className="container-top__price-container__principal-title">{coin_name}</h1>
+            <h2 className='container-top__price-container__price'>{price ? `R$ ${parseFloat(price.buy).toFixed(3)}` : 'Loading'}</h2>
 
             <div className='container-top__price-container__percentage-container'>
                 <span className='container-top__price-container__percentage-time'>

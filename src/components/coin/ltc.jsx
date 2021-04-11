@@ -4,6 +4,7 @@ import Price from './price/price.jsx'
 import Preview from './preview/preview.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
 import Book from './book/book.jsx'
+import { SiLitecoin } from 'react-icons/si'
 
 const LTC = () => {
 
@@ -24,9 +25,9 @@ const LTC = () => {
 
             <BackgroundStatus calcStatus={price} />
 
-            <Price price={price} />
+            <Price price={price} coin_name='Bitcoin (BTC)' />
 
-            <Preview coin_name='Litecoin (LTC)' price={price} logo='Procurar logo' />
+            <Preview coin_name='Litecoin (LTC)' price={price} logo={<SiLitecoin />} />
 
             <Book coin='LTC' />
 

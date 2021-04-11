@@ -50,6 +50,8 @@
     animation: border-status-animation-up 1.5s ease-in alternate-reverse infinite; }
   .container-top__coin:hover .container-top__background-status {
     animation: border-status-animation-focus 6s linear infinite; }
+  .container-top__coin:hover .container-top__price-container .container-top__price-container__principal-title {
+    opacity: 1; }
   .container-top__price-container {
     position: absolute;
     top: 50%;
@@ -58,13 +60,22 @@
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .container-top__price-container__principal-title {
+      display: inline-block;
+      color: white;
+      white-space: nowrap;
+      font-size: 22px;
+      margin-bottom: 16px;
+      opacity: 0;
+      transition: opacity 2s; }
     .container-top__price-container__price {
       display: inline-block;
       background-color: #f7f9fa;
       border: 1px solid #ebeef0;
       white-space: nowrap;
       padding: 3px;
-      border-radius: 5px; }
+      border-radius: 5px;
+      font-size: 20px; }
     .container-top__price-container__percentage-container {
       display: flex;
       text-align: center; }
@@ -113,7 +124,8 @@
         background-color: #f7f9fa;
         transition: all ease-in-out 1s;
         overflow: hidden;
-        font-size: 14px; }
+        font-size: 14px;
+        opacity: 0; }
         .container-top__price-container__container-book__book__title {
           display: flex;
           justify-content: center;
@@ -167,28 +179,32 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -75%); }
-  .container-top__top-level {
+  .container-top__logo {
+    font-size: 45px;
     font-style: italic;
     text-decoration: underline;
     color: goldenrod;
     transform: translateY(-60%);
     transition: all 1s; }
-  .container-top__coin:hover .container-top__top-level {
-    margin-bottom: auto;
-    font-size: 28px; }
+  .container-top__coin:hover .container-top__logo {
+    transform: translateY(55%);
+    font-size: 120px; }
   .container-top__title {
+    white-space: nowrap;
     font-size: 20px;
     margin-bottom: 1rem;
     transition: all 1s; }
   .container-top__coin:hover .container-top__title {
     margin-bottom: 0;
-    font-size: 25px; }
+    font-size: 25px;
+    opacity: 0; }
   .container-top__price-title {
     white-space: nowrap;
     font-size: 18px;
     transition: all 1s; }
   .container-top__coin:hover .container-top__price-title {
-    opacity: 0; }
+    opacity: 0;
+    transform: translateY(-30px); }
 
 .App {
   text-align: center; }
@@ -258,6 +274,7 @@
   transform: rotate(540deg); }
 
 .slide {
+  opacity: 1;
   height: 180px;
   border: 1px solid #ebeef0; }
 
