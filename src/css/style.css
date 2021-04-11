@@ -112,9 +112,30 @@
         overflow: hidden;
         font-size: 14px; }
         .container-top__price-container__container-book__book__title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           height: 15%;
           border-bottom: 2px solid black;
+          color: white;
+          background-color: black;
           text-align: center; }
+        .container-top__price-container__container-book__book__sub-title-sell {
+          background-color: red;
+          font-weight: 500;
+          color: white;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          border-bottom: 2px solid lightgrey;
+          margin-bottom: 2px; }
+        .container-top__price-container__container-book__book__sub-title-buy {
+          background-color: green;
+          font-weight: 500;
+          color: white;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          border-bottom: 2px solid lightgrey;
+          margin-bottom: 2px; }
         .container-top__price-container__container-book__book__orders {
           display: flex;
           height: 85%;
@@ -123,7 +144,7 @@
           display: flex;
           flex-direction: column;
           width: 50%;
-          border-right: 2px solid black;
+          border-right: 2px solid lightgrey;
           text-align: center; }
         .container-top__price-container__container-book__book__buy {
           display: flex;
@@ -135,7 +156,8 @@
           padding-top: 2px;
           padding-bottom: 2px;
           display: flex;
-          flex-direction: column;
+          flex-direction: column; }
+        .container-top__price-container__container-book__book__prices:not(:last-child) {
           border-bottom: 1px solid gray; }
   .container-top__preview {
     position: absolute;

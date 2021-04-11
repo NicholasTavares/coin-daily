@@ -28,7 +28,7 @@ const LTC = () => {
 
             <Preview coin_name='Litecoin (LTC)' price={price} logo='Procurar logo' />
 
-            <Book />
+            <Book coin='LTC' />
 
         </div>
     )

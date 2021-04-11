@@ -28,7 +28,7 @@ const ETH = () => {
 
             <Preview coin_name='Ethereum (ETH)' price={price} logo='Procurar logo' />
 
-            <Book />
+            <Book coin='ETH' />
 
         </div>
     )
