@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import useAPI from '../../api/useAPI.js'
+import useAPI_PriceCoin from '../../api/useAPI_PriceCoin.js'
 import Preview from './preview/preview.jsx'
 import Price from './price/price.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
@@ -7,7 +7,7 @@ import Book from './book/book.jsx'
 
 const ETH = () => {
 
-    const [price, searchPrice] = useAPI()
+    const [price, searchPrice] = useAPI_PriceCoin()
     const [time, setTime] = useState(0)
     useEffect(() => {
         searchPrice('ETH')

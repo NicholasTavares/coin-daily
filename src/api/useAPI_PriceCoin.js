@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-export default function useAPI() {
+export default function useAPI_PriceCoin() {
     const [price, setPrice] = useState(null)
 
     async function searchCoin(cripto) {
@@ -14,5 +14,6 @@ export default function useAPI() {
     return [price, searchCoin]
 
 }
+
 
 
