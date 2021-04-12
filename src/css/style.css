@@ -43,11 +43,8 @@
     border-top-color: blueviolet;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
-  .container-top .background-status-down {
-    animation: border-status-animation-down 1.5s ease-in alternate-reverse infinite; }
-  .container-top .background-status-up {
-    animation: border-status-animation-up 1.5s ease-in alternate-reverse infinite; }
+    transform: translate(-50%, -50%);
+    animation: border-status-animation 1.5s ease-in alternate-reverse infinite; }
   .container-top__coin:hover .container-top__background-status {
     animation: border-status-animation-focus 6s linear infinite; }
   .container-top__coin:hover .container-top__price-container .container-top__price-container__principal-title {
@@ -199,8 +196,15 @@
     font-size: 25px;
     opacity: 0; }
   .container-top__price-title {
+    display: inline-block;
+    background-color: #0107F5;
+    color: white;
+    border: 1px solid #ebeef0;
     white-space: nowrap;
-    font-size: 18px;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+    white-space: nowrap;
     transition: all 1s; }
   .container-top__coin:hover .container-top__price-title {
     opacity: 0;
@@ -246,19 +250,12 @@
     opacity: 1;
     transform: translateX(0); } }
 
-@keyframes border-status-animation-down {
+@keyframes border-status-animation {
   from {
     transform: translate(-50%, -50%);
     border-color: lightgrey; }
   to {
-    border-color: #16c784; } }
-
-@keyframes border-status-animation-up {
-  from {
-    transform: translate(-50%, -50%);
-    border-color: lightgrey; }
-  to {
-    border-color: #16C73A; } }
+    border-color: blueviolet; } }
 
 @keyframes border-status-animation-focus {
   to {

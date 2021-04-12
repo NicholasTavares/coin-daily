@@ -57,16 +57,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation: border-status-animation 1.5s ease-in alternate-reverse infinite;
    }
-
-   .background-status-down{
-       animation: border-status-animation-down 1.5s ease-in alternate-reverse infinite;
-    }
-    .background-status-up{
-        animation: border-status-animation-up 1.5s ease-in alternate-reverse infinite;
-    }
-
-
 
    &__coin:hover &__background-status{
         animation: border-status-animation-focus 6s linear infinite;
@@ -268,10 +260,16 @@
         opacity: 0;
     }
 
-
     &__price-title{
+        display: inline-block;
+        background-color: #0107F5;
+        color: white;
+        border: 1px solid #ebeef0;
         white-space: nowrap;
-        font-size: 18px;
+        padding: 3px;
+        border-radius: 5px;
+        font-size: 20px;
+        white-space: nowrap;
         transition: all 1s;
     }
     &__coin:hover &__price-title{
