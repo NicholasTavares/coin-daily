@@ -49,165 +49,174 @@
     animation: border-status-animation-focus 6s linear infinite; }
   .container-top__coin:hover .container-top__price-container .container-top__price-container__principal-title {
     opacity: 1; }
-  .container-top__price-container {
+
+.container-top__price-container__container-book {
+  width: 250px;
+  transform: translate(-50%, 360%);
+  position: absolute; }
+  .container-top__price-container__container-book__arrow {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    color: blueviolet;
+    transition: transform 1s ease; }
+  .container-top__price-container__container-book__arrow > svg {
+    animation: arrow 1s ease-in-out alternate-reverse infinite; }
+  .container-top__price-container__container-book__book {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    .container-top__price-container__principal-title {
-      display: inline-block;
-      color: white;
-      white-space: nowrap;
-      font-size: 22px;
-      margin-bottom: 16px;
-      opacity: 0;
-      transition: opacity 2s; }
-    .container-top__price-container__price {
-      display: inline-block;
-      background-color: #f7f9fa;
-      border: 1px solid #ebeef0;
-      white-space: nowrap;
-      padding: 3px;
-      border-radius: 5px;
-      font-size: 20px; }
-    .container-top__price-container__percentage-container {
-      display: flex;
-      text-align: center; }
-    .container-top__price-container__percentage-container:first-of-type {
-      margin-top: 14px;
-      margin-bottom: 6px; }
-    .container-top__price-container__percentage-time {
-      display: inline-block;
-      width: 42px;
-      background-color: #f7f9fa;
-      border: 1px solid #ebeef0;
-      border-radius: 5px;
-      font-size: 12px;
-      padding: 3px;
-      white-space: nowrap;
-      text-align: center; }
-    .container-top__price-container__percentage-price {
-      display: inline-block;
-      margin-left: 10px;
-      white-space: nowrap;
-      font-size: 15px;
-      font-weight: 500;
-      text-align: center;
-      color: #f44336; }
-    .container-top__price-container__container-book {
-      width: 250px;
-      transform: translate(-50%, 360%);
-      position: absolute; }
-      .container-top__price-container__container-book__arrow {
-        display: inline-block;
-        cursor: pointer;
-        font-size: 30px;
-        font-weight: 700;
-        color: blueviolet;
-        transition: transform 1s ease; }
-      .container-top__price-container__container-book__arrow > svg {
-        animation: arrow 1s ease-in-out alternate-reverse infinite; }
-      .container-top__price-container__container-book__book {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-        border-radius: 3px;
-        height: 0px;
-        margin-right: auto;
-        background-color: #f7f9fa;
-        transition: all ease-in-out 1s;
-        overflow: hidden;
-        font-size: 14px;
-        opacity: 0; }
-        .container-top__price-container__container-book__book__title {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 15%;
-          border-bottom: 2px solid black;
-          color: white;
-          background-color: black;
-          text-align: center; }
-        .container-top__price-container__container-book__book__sub-title-sell {
-          background-color: red;
-          font-weight: 500;
-          color: white;
-          padding-top: 2px;
-          padding-bottom: 2px;
-          border-bottom: 2px solid lightgrey;
-          margin-bottom: 2px; }
-        .container-top__price-container__container-book__book__sub-title-buy {
-          background-color: green;
-          font-weight: 500;
-          color: white;
-          padding-top: 2px;
-          padding-bottom: 2px;
-          border-bottom: 2px solid lightgrey;
-          margin-bottom: 2px; }
-        .container-top__price-container__container-book__book__orders {
-          display: flex;
-          height: 85%;
-          font-size: 12.5px; }
-        .container-top__price-container__container-book__book__sell {
-          display: flex;
-          flex-direction: column;
-          width: 50%;
-          border-right: 2px solid lightgrey;
-          text-align: center; }
-        .container-top__price-container__container-book__book__buy {
-          display: flex;
-          flex-direction: column;
-          width: 50%;
-          text-align: center; }
-        .container-top__price-container__container-book__book__prices {
-          text-align: left;
-          padding-top: 2px;
-          padding-bottom: 2px;
-          display: flex;
-          flex-direction: column; }
-        .container-top__price-container__container-book__book__prices:not(:last-child) {
-          border-bottom: 1px solid gray; }
-  .container-top__preview {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -75%); }
-  .container-top__logo {
-    font-size: 45px;
-    font-style: italic;
-    text-decoration: underline;
-    transform: translateY(-30%);
-    transition: all 1s; }
-  .container-top__coin:hover .container-top__logo {
-    transform: translateY(58%);
-    font-size: 140px; }
-  .container-top__title {
-    white-space: nowrap;
-    font-size: 20px;
-    margin-bottom: 1rem;
-    transition: all 1s; }
-  .container-top__coin:hover .container-top__title {
-    margin-bottom: 0;
-    font-size: 25px;
+    width: 250px;
+    border-radius: 3px;
+    height: 0px;
+    margin-right: auto;
+    background-color: #f7f9fa;
+    transition: all ease-in-out 1s;
+    overflow: hidden;
+    font-size: 14px;
     opacity: 0; }
-  .container-top__price-title {
+    .container-top__price-container__container-book__book__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15%;
+      border-bottom: 2px solid black;
+      color: white;
+      background-color: black;
+      text-align: center; }
+    .container-top__price-container__container-book__book__sub-title-sell {
+      background-color: red;
+      font-weight: 500;
+      color: white;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid lightgrey;
+      margin-bottom: 2px; }
+    .container-top__price-container__container-book__book__sub-title-buy {
+      background-color: green;
+      font-weight: 500;
+      color: white;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid lightgrey;
+      margin-bottom: 2px; }
+    .container-top__price-container__container-book__book__orders {
+      display: flex;
+      height: 85%;
+      font-size: 12.5px; }
+    .container-top__price-container__container-book__book__sell {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      border-right: 2px solid lightgrey;
+      text-align: center; }
+    .container-top__price-container__container-book__book__buy {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      text-align: center; }
+    .container-top__price-container__container-book__book__prices {
+      text-align: left;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      display: flex;
+      flex-direction: column; }
+    .container-top__price-container__container-book__book__prices:not(:last-child) {
+      border-bottom: 1px solid gray; }
+
+.container-top__preview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%); }
+
+.container-top__logo {
+  font-size: 45px;
+  font-style: italic;
+  text-decoration: underline;
+  transform: translateY(-30%);
+  transition: all 1s; }
+
+.container-top__coin:hover .container-top__logo {
+  transform: translateY(58%);
+  font-size: 140px; }
+
+.container-top__title {
+  white-space: nowrap;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  transition: all 1s; }
+
+.container-top__coin:hover .container-top__title {
+  margin-bottom: 0;
+  font-size: 25px;
+  opacity: 0; }
+
+.container-top__price-title {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border: 1px solid #ebeef0;
+  white-space: nowrap;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 20px;
+  white-space: nowrap;
+  transition: all 1s; }
+
+.container-top__coin:hover .container-top__price-title {
+  opacity: 0;
+  transform: translateY(-30px); }
+
+.container-top__price-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; }
+  .container-top__price-container__principal-title {
     display: inline-block;
-    background-color: black;
     color: white;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 22px;
+    margin-bottom: 16px;
+    opacity: 0;
+    transition: opacity 2s; }
+  .container-top__price-container__price {
+    display: inline-block;
+    background-color: #f7f9fa;
     border: 1px solid #ebeef0;
     white-space: nowrap;
     padding: 3px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 20px; }
+  .container-top__price-container__percentage-container {
+    display: flex;
+    text-align: center; }
+  .container-top__price-container__percentage-container:first-of-type {
+    margin-top: 14px;
+    margin-bottom: 6px; }
+  .container-top__price-container__percentage-time {
+    display: inline-block;
+    width: 42px;
+    background-color: #f7f9fa;
+    border: 1px solid #ebeef0;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 3px;
     white-space: nowrap;
-    transition: all 1s; }
-  .container-top__coin:hover .container-top__price-title {
-    opacity: 0;
-    transform: translateY(-30px); }
+    text-align: center; }
+  .container-top__price-container__percentage-price {
+    display: inline-block;
+    margin-left: 10px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: #f44336; }
 
 .App {
   text-align: center; }
