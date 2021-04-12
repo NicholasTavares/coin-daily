@@ -27,7 +27,7 @@ const LTC = () => {
 
             <Price price={price} coin_name='Litecoin (LTC)' />
 
-            <Preview coin_name='Litecoin (LTC)' price={price} logo={<SiLitecoin />} />
+            <Preview coin_name='Litecoin (LTC)' price={price} logo={<SiLitecoin />} colorLogo="#a1a1a1" />
 
             <Book coin='LTC' />
 

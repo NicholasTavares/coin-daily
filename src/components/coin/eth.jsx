@@ -27,7 +27,7 @@ const ETH = () => {
 
             <Price price={price} coin_name='Ethereum (ETH)' />
 
-            <Preview coin_name='Ethereum (ETH)' price={price} logo={<FaEthereum />} />
+            <Preview coin_name='Ethereum (ETH)' price={price} logo={<FaEthereum />} colorLogo="#1A140E" />
 
             <Book coin='ETH' />
 

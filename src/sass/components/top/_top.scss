@@ -239,13 +239,12 @@
         font-size: 45px;
         font-style: italic;
         text-decoration: underline;
-        color: goldenrod;
-        transform: translateY(-60%);
+        transform: translateY(-30%);
         transition: all 1s;
     }
     &__coin:hover &__logo{
-        transform: translateY(55%);
-        font-size: 120px;
+        transform: translateY(58%);
+        font-size: 140px;
     }
    
     &__title{
@@ -262,7 +261,7 @@
 
     &__price-title{
         display: inline-block;
-        background-color: #0107F5;
+        background-color: black;
         color: white;
         border: 1px solid #ebeef0;
         white-space: nowrap;

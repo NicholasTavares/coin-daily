@@ -26,7 +26,7 @@ const BTC = () => {
 
             <Price coin_name='Bitcoin (BTC)' price={price} />
 
-            <Preview coin_name='Bitcoin (BTC)' price={price} logo={<FaBitcoin />} />
+            <Preview coin_name='Bitcoin (BTC)' price={price} logo={<FaBitcoin />} colorLogo="goldenrod" />
 
             <Book coin='BTC' />
 
