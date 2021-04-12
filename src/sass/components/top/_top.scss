@@ -57,20 +57,16 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation: border-status-animation 1.5s ease-in alternate-reverse infinite;
    }
-
-   .background-status-down{
-       animation: border-status-animation-down 1.5s ease-in alternate-reverse infinite;
-    }
-    .background-status-up{
-        animation: border-status-animation-up 1.5s ease-in alternate-reverse infinite;
-    }
-
-
 
    &__coin:hover &__background-status{
         animation: border-status-animation-focus 6s linear infinite;
    }
+
+   &__coin:hover &__price-container  &__price-container__principal-title{
+    opacity: 1;
+}
 
    &__price-container{
     position: absolute;
@@ -81,6 +77,16 @@
     flex-direction: column;
     align-items: center;
 
+    &__principal-title{
+        display: inline-block;
+        color: white;
+        white-space: nowrap;
+        font-size: 22px;
+        margin-bottom: 16px;
+        opacity: 0;
+        transition: opacity 2s;
+    }
+
     &__price{
         display: inline-block;
         background-color: #f7f9fa;
@@ -88,6 +94,7 @@
         white-space: nowrap;
         padding: 3px;
         border-radius: 5px;
+        font-size: 20px;
     }
 
     &__percentage-container{
@@ -152,6 +159,7 @@
             transition: all ease-in-out 1s;
             overflow: hidden;
             font-size: 14px;
+            opacity: 0;
 
             &__title{
                 display: flex;
@@ -227,19 +235,20 @@
         transform: translate(-50%, -75%);
     }
 
-    &__top-level{
+    &__logo{
+        font-size: 45px;
         font-style: italic;
         text-decoration: underline;
-        color: goldenrod;
-        transform: translateY(-60%);
+        transform: translateY(-30%);
         transition: all 1s;
     }
-    &__coin:hover &__top-level{
-        margin-bottom: auto;
-        font-size: 28px;
+    &__coin:hover &__logo{
+        transform: translateY(58%);
+        font-size: 140px;
     }
    
     &__title{
+        white-space: nowrap;
         font-size: 20px;
         margin-bottom: 1rem;
         transition: all 1s;
@@ -247,15 +256,23 @@
     &__coin:hover &__title{
         margin-bottom: 0;
         font-size: 25px;
+        opacity: 0;
     }
 
-
     &__price-title{
+        display: inline-block;
+        background-color: black;
+        color: white;
+        border: 1px solid #ebeef0;
         white-space: nowrap;
-        font-size: 18px;
+        padding: 3px;
+        border-radius: 5px;
+        font-size: 20px;
+        white-space: nowrap;
         transition: all 1s;
     }
     &__coin:hover &__price-title{
         opacity: 0;
+        transform: translateY(-30px);
     }
 }

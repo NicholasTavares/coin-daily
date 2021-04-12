@@ -4,6 +4,7 @@ import Preview from './preview/preview.jsx'
 import Price from './price/price.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
 import Book from './book/book.jsx'
+import { FaEthereum } from 'react-icons/fa'
 
 const ETH = () => {
 
@@ -24,9 +25,9 @@ const ETH = () => {
 
             <BackgroundStatus calcStatus={price} />
 
-            <Price price={price} />
+            <Price price={price} coin_name='Ethereum (ETH)' />
 
-            <Preview coin_name='Ethereum (ETH)' price={price} logo='Procurar logo' />
+            <Preview coin_name='Ethereum (ETH)' price={price} logo={<FaEthereum />} colorLogo="#1A140E" />
 
             <Book coin='ETH' />
 

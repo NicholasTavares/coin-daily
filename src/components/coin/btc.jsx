@@ -4,6 +4,7 @@ import Price from './price/price.jsx'
 import Preview from './preview/preview.jsx'
 import BackgroundStatus from './background-status/background-status.jsx'
 import Book from './book/book.jsx'
+import { FaBitcoin } from 'react-icons/fa'
 
 const BTC = () => {
     const [price, searchPrice] = useAPI_PriceCoin()
@@ -18,18 +19,16 @@ const BTC = () => {
 
     }, [time])
 
-
     return (
         <div className='container-top__coin container-top__coin__1'>
 
             <BackgroundStatus calcStatus={price} />
 
-            <Price price={price} />
+            <Price coin_name='Bitcoin (BTC)' price={price} />
 
-            <Preview coin_name='Bitcoin (BTC)' price={price} logo='Procurar logo' />
+            <Preview coin_name='Bitcoin (BTC)' price={price} logo={<FaBitcoin />} colorLogo="goldenrod" />
 
             <Book coin='BTC' />
-
 
         </div>
     )

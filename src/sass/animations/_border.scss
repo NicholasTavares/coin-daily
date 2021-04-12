@@ -1,22 +1,11 @@
-@keyframes border-status-animation-down {
+@keyframes border-status-animation {
     from{
         transform: translate(-50%, -50%);
         border-color: lightgrey;
     }
 
     to{
-        border-color: #16c784;
-    }
-}
-
-@keyframes border-status-animation-up {
-    from{
-        transform: translate(-50%, -50%);
-        border-color: lightgrey;
-    }
-
-    to{
-        border-color: #16C73A;
+        border-color: blueviolet;
     }
 }
 
