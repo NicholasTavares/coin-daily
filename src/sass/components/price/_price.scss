@@ -5,11 +5,11 @@
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     &__principal-title{
         display: inline-block;
         color: white;
+        text-align: center;
         white-space: nowrap;
         font-size: 22px;
         margin-bottom: 16px;
