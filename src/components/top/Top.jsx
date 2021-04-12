@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Back from '../back-animation/Back-animation'
 import BTC from '../coin/btc'
 import ETH from '../coin/eth'

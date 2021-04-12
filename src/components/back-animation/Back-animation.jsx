@@ -1,5 +1,5 @@
 import React from 'react'
-import video from '../../sass/components/back-animation/video.mp4'
+import video from '../../sass/animations/video.mp4'
 
 const Back = () => {
 

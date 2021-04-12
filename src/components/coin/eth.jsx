@@ -17,7 +17,7 @@ const ETH = () => {
         }, 5000);
 
         return () => clearInterval(interval)
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [time])
 
     return (
