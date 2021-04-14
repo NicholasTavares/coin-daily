@@ -8,4 +8,4 @@
 
 ### Para rodar projeto:
   1. Digite no terminal: npm install
-  2. Para rodar o servidor: npm start
+  2. Para rodar o servidor: npm dev
