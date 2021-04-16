@@ -15,6 +15,11 @@
     @include respond (tab-port) {
         font-size: 4.5rem;
     }
+
+    @include respond (phone) {
+        font-size: 4.5rem;
+        transform: translateY(-15%);
+    }
     
 }
 .container-top__coin:hover .container-top__logo{
@@ -23,6 +28,10 @@
 
     @include respond (tab-port) {
         font-size: 14rem;
+    }
+
+    @include respond (phone) {
+        font-size: 13rem;
     }
 }
 
@@ -34,6 +43,10 @@
 
     @include respond (tab-port) {
         font-size: 2rem;
+    }
+
+    @include respond (phone) {
+        font-size: 1.9rem;
     }
 
 }
@@ -57,6 +70,7 @@
     @include respond (tab-port) {
         font-size: 2rem;
     }
+
 }
 .container-top__coin:hover .container-top__price-title{
     opacity: 0;
