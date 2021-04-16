@@ -20,6 +20,10 @@
             font-size: 2.1rem;
             margin-bottom: 8px;
         }
+
+        @include respond (phone) {
+            font-size: 1.8rem;
+        }
     }
 
     &__price{
@@ -30,6 +34,10 @@
         padding: 3px;
         border-radius: 5px;
         font-size: 2.2rem;
+
+        @include respond (tab-port) {
+            font-size: 1.9rem;
+        }
     }
 
     &__percentage-container{
@@ -63,6 +71,12 @@
             width: 32px;
             padding: 2px;
         }
+
+        @include respond (phone) {
+            font-size: 1.2rem;
+            width: 30px;
+            padding: 2px;
+        }
     }
 
     &__percentage-price{
@@ -77,6 +91,10 @@
 
         @include respond (tab-port) {
             font-size: 1.8rem;
+        }
+
+        @include respond (phone) {
+            font-size: 1.7rem;
         }
     }
 
