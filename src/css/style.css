@@ -238,7 +238,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   white-space: nowrap;
   padding: 3px;
   border-radius: 5px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   white-space: nowrap;
   transition: all 1s; }
   @media (max-width: 56.25em) {
@@ -261,7 +261,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     color: white;
     text-align: center;
     white-space: nowrap;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 16px;
     opacity: 0;
     transition: opacity 2s; }
@@ -299,24 +299,23 @@ ORDER: Base + typography > general layout + grid > page layout > components
     background-color: #f7f9fa;
     border: 1px solid #ebeef0;
     border-radius: 5px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding: 3px;
     white-space: nowrap;
     text-align: center; }
     @media (max-width: 56.25em) {
       .container-top__price-container__percentage-time {
-        font-size: 1.3rem;
         width: 32px;
         padding: 2px; } }
     @media (max-width: 37.5em) {
       .container-top__price-container__percentage-time {
-        font-size: 1.2rem;
-        width: 30px;
+        font-size: 1.1rem;
+        width: 28px;
         padding: 2px; } }
   .container-top__price-container__percentage-price {
     display: inline-block;
     margin-left: 10px;
-    font-size: 2.2rem;
+    font-size: 1.9rem;
     white-space: nowrap;
     font-weight: 500;
     justify-content: center;
@@ -391,8 +390,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .slide {
   opacity: 1;
-  height: 160px;
+  height: 180px;
   border: 1px solid #ebeef0; }
+  @media (max-width: 56.25em) {
+    .slide {
+      height: 160px; } }
 
 *,
 *::after,
