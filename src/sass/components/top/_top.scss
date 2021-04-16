@@ -11,33 +11,58 @@
             left: 50%;
             transform: translate(-50%, -40%);
             animation: moveOnTop 3.5s ease-in-out;
+
+            @include respond (phone) {
+                top: 20%;
+                left: 50%;
+            }
         }
 
         &__2{
             top: 45%;
-            left: 25%;
+            left: 20%;
             transform: translate(-50%, -50%);
             animation: moveInLeft 2s ease-in;
+
+            @include respond (phone) {
+                top: 50%;
+                left: 50%;
+            }
         }
 
         &__3{
             top: 45%;
-            left: 75%;
+            left: 80%;
             transform: translate(-50%, -50%);
             animation: moveInRight 2s ease-in;
+
+            @include respond (phone) {
+                top: 80%;
+                left: 50%;
+            }
         }
     }
 
     &__head{
         position: absolute;
-        height: 250px;
-        width: 250px;
+        height: 25rem;
+        width: 25rem;
         border-radius: 50%;
         background-color: beige;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         transition: transform 1s, box-shadow 1s;
+
+        @include respond (tab-port){
+            height: 22rem;
+            width: 22rem;
+        }
+
+        @include respond (phone){
+            height: 17rem;
+            width: 17rem;
+        }
     }
 
     &__coin:hover &__head{
@@ -48,16 +73,26 @@
 
     &__background-status{
         position: absolute;
-        height: 260px;
-        width: 260px;
+        height: 26rem;
+        width: 26rem;
         border-radius: 50%;
         background-color: black;
         border: 6px solid lightgrey;
-        border-top-color: blueviolet;
+        border-top-color: #FFA500;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         animation: border-status-animation 1.5s ease-in alternate-reverse infinite;
+
+        @include respond (tab-port){
+            height: 23rem;
+            width: 23rem;
+        }
+
+        @include respond (phone){
+            height: 18rem;
+            width: 18rem;
+        }
    }
 
    &__coin:hover &__background-status{

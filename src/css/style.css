@@ -1,3 +1,20 @@
+/*
+0 - 600px:  Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:    Tablet landscape
+(1200 - 1800) is where out normal styles apply
+1800px + :  Big desktop
+
+breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 .container-top {
   height: 100vh;
   position: relative;
@@ -9,42 +26,70 @@
       left: 50%;
       transform: translate(-50%, -40%);
       animation: moveOnTop 3.5s ease-in-out; }
+      @media (max-width: 37.5em) {
+        .container-top__coin__1 {
+          top: 20%;
+          left: 50%; } }
     .container-top__coin__2 {
       top: 45%;
-      left: 25%;
+      left: 20%;
       transform: translate(-50%, -50%);
       animation: moveInLeft 2s ease-in; }
+      @media (max-width: 37.5em) {
+        .container-top__coin__2 {
+          top: 50%;
+          left: 50%; } }
     .container-top__coin__3 {
       top: 45%;
-      left: 75%;
+      left: 80%;
       transform: translate(-50%, -50%);
       animation: moveInRight 2s ease-in; }
+      @media (max-width: 37.5em) {
+        .container-top__coin__3 {
+          top: 80%;
+          left: 50%; } }
   .container-top__head {
     position: absolute;
-    height: 250px;
-    width: 250px;
+    height: 25rem;
+    width: 25rem;
     border-radius: 50%;
     background-color: beige;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 1s, box-shadow 1s; }
+    @media (max-width: 56.25em) {
+      .container-top__head {
+        height: 22rem;
+        width: 22rem; } }
+    @media (max-width: 37.5em) {
+      .container-top__head {
+        height: 17rem;
+        width: 17rem; } }
   .container-top__coin:hover .container-top__head {
     transform: translate(-50%, -110%) scale(0.5);
     border: 1px solid lightgray;
     box-shadow: 0 0rem 1rem 0.1rem rgba(0, 0, 0, 0.15); }
   .container-top__background-status {
     position: absolute;
-    height: 260px;
-    width: 260px;
+    height: 26rem;
+    width: 26rem;
     border-radius: 50%;
     background-color: black;
     border: 6px solid lightgrey;
-    border-top-color: blueviolet;
+    border-top-color: #FFA500;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation: border-status-animation 1.5s ease-in alternate-reverse infinite; }
+    @media (max-width: 56.25em) {
+      .container-top__background-status {
+        height: 23rem;
+        width: 23rem; } }
+    @media (max-width: 37.5em) {
+      .container-top__background-status {
+        height: 18rem;
+        width: 18rem; } }
   .container-top__coin:hover .container-top__background-status {
     animation: border-status-animation-focus 6s linear infinite; }
   .container-top__coin:hover .container-top__price-container .container-top__price-container__principal-title {
@@ -52,8 +97,15 @@
 
 .container-top__price-container__container-book {
   width: 250px;
-  transform: translate(-50%, 360%);
+  transform: translate(-50%, 350%);
   position: absolute; }
+  @media (max-width: 56.25em) {
+    .container-top__price-container__container-book {
+      width: 200px;
+      transform: translate(-50%, 250%); } }
+  @media (max-width: 37.5em) {
+    .container-top__price-container__container-book {
+      display: none; } }
   .container-top__price-container__container-book__arrow {
     display: inline-block;
     cursor: pointer;
@@ -76,6 +128,10 @@
     overflow: hidden;
     font-size: 14px;
     opacity: 0; }
+    @media (max-width: 56.25em) {
+      .container-top__price-container__container-book__book {
+        width: 200px;
+        font-size: 12px; } }
     .container-top__price-container__container-book__book__title {
       display: flex;
       justify-content: center;
@@ -105,6 +161,9 @@
       display: flex;
       height: 85%;
       font-size: 12.5px; }
+      @media (max-width: 56.25em) {
+        .container-top__price-container__container-book__book__orders {
+          font-size: 11px; } }
     .container-top__price-container__container-book__book__sell {
       display: flex;
       flex-direction: column;
@@ -132,25 +191,33 @@
   transform: translate(-50%, -75%); }
 
 .container-top__logo {
-  font-size: 45px;
+  font-size: 5rem;
   font-style: italic;
   text-decoration: underline;
-  transform: translateY(-30%);
+  transform: translateY(-22%);
   transition: all 1s; }
+  @media (max-width: 56.25em) {
+    .container-top__logo {
+      font-size: 4.5rem; } }
 
 .container-top__coin:hover .container-top__logo {
   transform: translateY(58%);
-  font-size: 140px; }
+  font-size: 16rem; }
+  @media (max-width: 56.25em) {
+    .container-top__coin:hover .container-top__logo {
+      font-size: 14rem; } }
 
 .container-top__title {
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   transition: all 1s; }
+  @media (max-width: 56.25em) {
+    .container-top__title {
+      font-size: 2rem; } }
 
 .container-top__coin:hover .container-top__title {
   margin-bottom: 0;
-  font-size: 25px;
   opacity: 0; }
 
 .container-top__price-title {
@@ -161,9 +228,12 @@
   white-space: nowrap;
   padding: 3px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 2.5rem;
   white-space: nowrap;
   transition: all 1s; }
+  @media (max-width: 56.25em) {
+    .container-top__price-title {
+      font-size: 2rem; } }
 
 .container-top__coin:hover .container-top__price-title {
   opacity: 0;
@@ -181,10 +251,14 @@
     color: white;
     text-align: center;
     white-space: nowrap;
-    font-size: 22px;
+    font-size: 2.5rem;
     margin-bottom: 16px;
     opacity: 0;
     transition: opacity 2s; }
+    @media (max-width: 56.25em) {
+      .container-top__price-container__principal-title {
+        font-size: 2.1rem;
+        margin-bottom: 8px; } }
   .container-top__price-container__price {
     display: inline-block;
     background-color: #f7f9fa;
@@ -192,31 +266,44 @@
     white-space: nowrap;
     padding: 3px;
     border-radius: 5px;
-    font-size: 20px; }
+    font-size: 2.2rem; }
   .container-top__price-container__percentage-container {
     display: flex;
     text-align: center; }
   .container-top__price-container__percentage-container:first-of-type {
     margin-top: 14px;
     margin-bottom: 6px; }
+    @media (max-width: 56.25em) {
+      .container-top__price-container__percentage-container:first-of-type {
+        margin-top: 10px;
+        margin-bottom: 4px; } }
   .container-top__price-container__percentage-time {
     display: inline-block;
     width: 42px;
     background-color: #f7f9fa;
     border: 1px solid #ebeef0;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 1.6rem;
     padding: 3px;
     white-space: nowrap;
     text-align: center; }
+    @media (max-width: 56.25em) {
+      .container-top__price-container__percentage-time {
+        font-size: 1.3rem;
+        width: 32px;
+        padding: 2px; } }
   .container-top__price-container__percentage-price {
     display: inline-block;
     margin-left: 10px;
+    font-size: 2.2rem;
     white-space: nowrap;
-    font-size: 15px;
     font-weight: 500;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     color: #f44336; }
+    @media (max-width: 56.25em) {
+      .container-top__price-container__percentage-price {
+        font-size: 1.8rem; } }
 
 .App {
   text-align: center; }
@@ -263,7 +350,7 @@
     transform: translate(-50%, -50%);
     border-color: lightgrey; }
   to {
-    border-color: blueviolet; } }
+    border-color: #FFA500; } }
 
 @keyframes border-status-animation-focus {
   to {
@@ -280,7 +367,7 @@
 
 .slide {
   opacity: 1;
-  height: 180px;
+  height: 160px;
   border: 1px solid #ebeef0; }
 
 *,
@@ -292,6 +379,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

@@ -1,3 +1,6 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
 @import "./components/top/top";
 @import "./components/book/book";
 @import "./components/preview/preview";
@@ -12,5 +15,3 @@
 @import "./animations_event/animations_event";
 
 @import "./base/base";
-
-@import './abstracts/variables';
