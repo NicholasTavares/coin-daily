@@ -58,6 +58,11 @@
             height: 22rem;
             width: 22rem;
         }
+
+        @include respond (phone){
+            height: 17rem;
+            width: 17rem;
+        }
     }
 
     &__coin:hover &__head{
@@ -82,6 +87,11 @@
         @include respond (tab-port){
             height: 23rem;
             width: 23rem;
+        }
+
+        @include respond (phone){
+            height: 18rem;
+            width: 18rem;
         }
    }
 
