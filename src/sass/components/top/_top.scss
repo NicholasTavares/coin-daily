@@ -30,14 +30,19 @@
 
     &__head{
         position: absolute;
-        height: 250px;
-        width: 250px;
+        height: 25rem;
+        width: 25rem;
         border-radius: 50%;
         background-color: beige;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         transition: transform 1s, box-shadow 1s;
+
+        @include respond (tab-port){
+            height: 22rem;
+            width: 22rem;
+        }
     }
 
     &__coin:hover &__head{
@@ -48,16 +53,21 @@
 
     &__background-status{
         position: absolute;
-        height: 260px;
-        width: 260px;
+        height: 26rem;
+        width: 26rem;
         border-radius: 50%;
         background-color: black;
         border: 6px solid lightgrey;
-        border-top-color: blueviolet;
+        border-top-color: #FFA500;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         animation: border-status-animation 1.5s ease-in alternate-reverse infinite;
+
+        @include respond (tab-port){
+            height: 23rem;
+            width: 23rem;
+        }
    }
 
    &__coin:hover &__background-status{
