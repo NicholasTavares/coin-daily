@@ -1,7 +1,16 @@
 .container-top__price-container__container-book{
     width: 250px;
-    transform: translate(-50%, 360%);
+    transform: translate(-50%, 350%);
     position: absolute;
+
+    @include respond (tab-port) {
+        width: 200px;
+        transform: translate(-50%, 250%);
+    }
+
+    @include respond (phone) {
+        display: none;
+    }
 
     &__arrow{
         display: inline-block;
@@ -29,6 +38,11 @@
         overflow: hidden;
         font-size: 14px;
         opacity: 0;
+
+        @include respond (tab-port) {
+            width: 200px;
+            font-size: 12px;
+        }
 
         &__title{
             display: flex;
@@ -64,6 +78,10 @@
             display: flex;
             height: 85%;
             font-size: 12.5px;
+
+            @include respond (tab-port) {
+                font-size: 11px;
+            }
         }
 
         &__sell{

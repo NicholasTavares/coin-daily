@@ -26,16 +26,28 @@ ORDER: Base + typography > general layout + grid > page layout > components
       left: 50%;
       transform: translate(-50%, -40%);
       animation: moveOnTop 3.5s ease-in-out; }
+      @media (max-width: 37.5em) {
+        .container-top__coin__1 {
+          top: 20%;
+          left: 50%; } }
     .container-top__coin__2 {
       top: 45%;
       left: 20%;
       transform: translate(-50%, -50%);
       animation: moveInLeft 2s ease-in; }
+      @media (max-width: 37.5em) {
+        .container-top__coin__2 {
+          top: 50%;
+          left: 50%; } }
     .container-top__coin__3 {
       top: 45%;
       left: 80%;
       transform: translate(-50%, -50%);
       animation: moveInRight 2s ease-in; }
+      @media (max-width: 37.5em) {
+        .container-top__coin__3 {
+          top: 80%;
+          left: 50%; } }
   .container-top__head {
     position: absolute;
     height: 25rem;
@@ -77,8 +89,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .container-top__price-container__container-book {
   width: 250px;
-  transform: translate(-50%, 360%);
+  transform: translate(-50%, 350%);
   position: absolute; }
+  @media (max-width: 56.25em) {
+    .container-top__price-container__container-book {
+      width: 200px;
+      transform: translate(-50%, 250%); } }
+  @media (max-width: 37.5em) {
+    .container-top__price-container__container-book {
+      display: none; } }
   .container-top__price-container__container-book__arrow {
     display: inline-block;
     cursor: pointer;
@@ -101,6 +120,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
     overflow: hidden;
     font-size: 14px;
     opacity: 0; }
+    @media (max-width: 56.25em) {
+      .container-top__price-container__container-book__book {
+        width: 200px;
+        font-size: 12px; } }
     .container-top__price-container__container-book__book__title {
       display: flex;
       justify-content: center;
@@ -130,6 +153,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
       display: flex;
       height: 85%;
       font-size: 12.5px; }
+      @media (max-width: 56.25em) {
+        .container-top__price-container__container-book__book__orders {
+          font-size: 11px; } }
     .container-top__price-container__container-book__book__sell {
       display: flex;
       flex-direction: column;
@@ -333,7 +359,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .slide {
   opacity: 1;
-  height: 180px;
+  height: 160px;
   border: 1px solid #ebeef0; }
 
 *,
