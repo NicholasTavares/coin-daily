@@ -10,4 +10,4 @@
   1. Write on terminal: npm install
   2. To run the sever: npm start
 
-OBS: To turn on the production mode, change "start": "node server.js" to "start": "react-scripts start".
+WARNING: To turn on the production mode, change "start": "node server.js" to "start": "react-scripts start".
