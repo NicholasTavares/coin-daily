@@ -8,6 +8,6 @@
 
 ### To run:
   1. Write on terminal: npm install
-  2. To run the sever: npm start
+  2. To run the server: npm start
 
 WARNING: To turn on the production mode, change "start": "node server.js" to "start": "react-scripts start".
